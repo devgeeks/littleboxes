@@ -1,7 +1,13 @@
 # littleboxes
 The groundwork of a mobile css framework. Just the boxes.
 
+### Rationale
 
+After reading ["You Can't Not Have a Framework"](http://blog.ryanflorence.com/you-cant-not-have-a-framework.html) by [@ryanflorence](https://github.com/ryanflorence), I decided that I was not actually writing my apps without a CSS framework, so much as I was writing my own CSS framework but without any of the benefits of writing it purposefully.
+
+This is an attempt to do so, at least for part of it.
+
+The rest might come later, and elsewhere.
 
 ### License
 
