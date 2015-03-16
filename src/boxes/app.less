@@ -1,0 +1,15 @@
+@import '../mixins/littlemixins.less';
+
+.lb-app {
+  .positionAbsolute();
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &.lb-app-mobile {
+    touch-callout: none;
+    user-select: none;
+    tap-highlight-color: rgba(0,0,0,0);
+  }
+}

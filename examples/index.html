@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1,
+    maximum-scale=1, minimum-scale=1" />
+  <link
+    href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css" />
+  <link href="../dist/littleboxes.css" rel="stylesheet" type="text/css" />
+  <link href="custom.css" rel="stylesheet" type="text/css" />
+  <title>Littleboxes example</title>
+</head>
+<body>
+  <div class="menu lb-sidemenu">
+    <div class="menucontent lb-sidemenu-content">
+      <p>menu</p>
+    </div>
+  </div>
+  <div class="app lb-app">
+    <div class="nav lb-nav lb-app-mobile">
+      <a href="#" class="menubutton lb-nav-button lb-nav-button-round
+        lib-nav-button-left"><span class="fa fa-bars"></span></a>
+      <div class="lb-nav-title">Littleboxes</div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var menubutton = document.getElementsByClassName('menubutton')[0];
+    var menu = document.getElementsByClassName('menu')[0];
+
+    menubutton.addEventListener('click', function(event) {
+      menu.classList.add('lb-sidemenu-open');
+    });
+
+    menu.addEventListener('click', function(event) {
+      menu.classList.remove('lb-sidemenu-open');
+    });
+  </script>
+</body>
+</html>

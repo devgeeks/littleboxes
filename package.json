@@ -1,0 +1,30 @@
+{
+  "name": "littleboxes",
+  "version": "0.0.1",
+  "description": "The groundwork of a mobile css framework. Just the boxes.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devgeeks/littleboxes.git"
+  },
+  "keywords": [
+    "CSS"
+  ],
+  "author": "tommy-carlos williams (tommy@devgeeks.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devgeeks/littleboxes/issues"
+  },
+  "homepage": "https://github.com/devgeeks/littleboxes",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-concat": "~2.2.0",
+    "gulp-less": "^1.3.6",
+    "gulp-minify-css": "~0.3.6",
+    "gulp-shell": "~0.2.7"
+  }
+}

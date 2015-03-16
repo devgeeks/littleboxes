@@ -1,0 +1,33 @@
+@import (once) '../mixins/littlemixins.less';
+
+.lb-nav {
+  .positionAbsolute(0, 0, auto, 0);
+  height: 55px;
+  line-height: 55px;
+  overflow: hidden;
+  z-index: 5;
+
+  .lb-nav-title {
+    .positionAbsolute(0, auto, 0, 55px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .lb-nav-button {
+    .positionAbsolute(8px, auto, 8px, auto);
+    color: inherit;
+    display: block;
+    width: 39px;
+    line-height: 39px;
+    text-align: center;
+
+    &.lb-nav-button-round {
+      border-radius: 39px;
+    }
+
+    &.lib-nav-button-left {
+      left: 8px;
+    }
+  }
+}
