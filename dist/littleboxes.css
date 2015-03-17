@@ -11,11 +11,11 @@
        box-sizing: border-box;
 }
 .lb-app.lb-app-mobile {
-  touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  touch-callout: none;
   tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .lb-nav {
@@ -77,9 +77,9 @@
   right: auto;
   bottom: 0;
   left: 0;
-  width: 270px;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
+  width: 270px;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
 }
