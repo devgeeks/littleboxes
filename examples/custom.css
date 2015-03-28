@@ -1,17 +1,17 @@
-body {                    
+body {
   font-family: sans-serif;
-}                         
-                          
-.app {                    
+}
+
+.app {
   background-color: white;
-}                                                 
-                          
-.nav {                    
-  background-color: red;  
-  color: white;           
-  padding: 0 20px;        
-  font-size: 20px;        
-}   
+}
+
+.nav {
+  background-color: red;
+  color: white;
+  padding: 0 20px;
+  font-size: 20px;
+}
 
 .nav .menubutton {
   background-color: inherit;

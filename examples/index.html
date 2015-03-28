@@ -4,36 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no, initial-scale=1,
     maximum-scale=1, minimum-scale=1" />
+  <link href="http://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.min.css" rel="stylesheet" type="text/css" />
   <link
     href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
     rel="stylesheet" type="text/css" />
   <link href="../dist/littleboxes.css" rel="stylesheet" type="text/css" />
-  <link href="custom.css" rel="stylesheet" type="text/css" />
+  <link href="base.css" rel="stylesheet" type="text/css" />
+  <!--<link href="custom.css" rel="stylesheet" type="text/css" />-->
   <title>Littleboxes example</title>
 </head>
 <body>
+  <!-- menu -->
   <div class="menu lb-sidemenu">
-    <div class="menucontent lb-sidemenu-content">
-      <p>menu</p>
-    </div>
+    <div class="menucontent lb-sidemenu-content"></div>
   </div>
+  <!-- app -->
   <div class="app lb-app">
+    <!-- navbar -->
     <div class="nav lb-nav lb-app-mobile">
-      <a href="#" class="menubutton lb-nav-button lb-nav-button-round
-        lib-nav-button-left"><span class="fa fa-bars"></span></a>
-      <div class="lb-nav-title">Littleboxes</div>
+      <!-- navbar button left -->
+      <a href="#" class="menubutton lb-nav-button lib-nav-button-left">...</a>
+      <!-- navbar title -->
+      <div class="lb-nav-title">Littleboxes title</div>
+    </div>
+    <!-- content -->
+    <div class="content lb-content">
+      <p>content</p>
+      <div class="lb-scrollable">
+        <ul class="list lb-list">
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+          <li class="lb-listitem">list item</li>
+        </ul>
+      </div>
     </div>
   </div>
   <script type="text/javascript">
     var menubutton = document.getElementsByClassName('menubutton')[0];
     var menu = document.getElementsByClassName('menu')[0];
+    var menucontent = document.getElementsByClassName('menucontent')[0];
 
     menubutton.addEventListener('click', function(event) {
+      event.preventDefault();
       menu.classList.add('lb-sidemenu-open');
     });
 
     menu.addEventListener('click', function(event) {
+      event.preventDefault();
       menu.classList.remove('lb-sidemenu-open');
+    });
+
+    menucontent.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
     });
   </script>
 </body>

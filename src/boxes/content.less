@@ -1,0 +1,9 @@
+@import (once) '../mixins/littlemixins.less';
+
+.lb-content {
+  .positionAbsolute();
+}
+
+.lb-nav + .lb-content {
+  .positionAbsolute(55px, 0, 0, 0);
+}

@@ -1,3 +1,25 @@
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+.lb-scrollable {
+  overflow: hidden;
+}
+.lb-scrollable + div,
+.lb-scrollable + ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .lb-app {
   position: absolute;
   top: 0;
@@ -9,6 +31,7 @@
   overflow: hidden;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
+  z-index: 1;
 }
 .lb-app.lb-app-mobile {
   -webkit-user-select: none;
@@ -17,6 +40,32 @@
           user-select: none;
   touch-callout: none;
   tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.lb-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.lb-nav + .lb-content {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.lb-list {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.lb-list .lb-listitem {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 55px;
 }
 .lb-nav {
   position: absolute;
@@ -27,7 +76,7 @@
   height: 55px;
   line-height: 55px;
   overflow: hidden;
-  z-index: 5;
+  z-index: 2;
 }
 .lb-nav .lb-nav-title {
   position: absolute;
@@ -45,11 +94,12 @@
   right: auto;
   bottom: 8px;
   left: auto;
-  color: inherit;
   display: block;
   width: 39px;
   line-height: 39px;
   text-align: center;
+  color: inherit;
+  text-decoration: none;
 }
 .lb-nav .lb-nav-button.lb-nav-button-round {
   border-radius: 39px;
@@ -67,7 +117,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 10;
+  z-index: 3;
   visibility: hidden;
   transition: all 0.3s ease-in;
 }
@@ -79,12 +129,13 @@
   left: 0;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
+  z-index: 4;
+  /* this should really be overridden... */
   width: 270px;
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
 }
 .lb-sidemenu.lb-sidemenu-open {
-  background-color: rgba(0, 0, 0, 0.4);
   visibility: visible;
 }
 .lb-sidemenu.lb-sidemenu-open .lb-sidemenu-content {
