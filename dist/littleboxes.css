@@ -1,3 +1,7 @@
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
 body {
   position: absolute;
   top: 0;
@@ -29,8 +33,6 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
   z-index: 1;
 }
 .lb-app.lb-app-mobile {
@@ -62,10 +64,14 @@ body {
   padding: 0;
 }
 .lb-list .lb-listitem {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   list-style-type: none;
   margin: 0;
   padding: 0;
   height: 55px;
+  line-height: 55px;
 }
 .lb-nav {
   position: absolute;
@@ -106,6 +112,17 @@ body {
 }
 .lb-nav .lb-nav-button.lib-nav-button-left {
   left: 8px;
+}
+.lb-scrollable {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .lb-sidemenu {
   position: absolute;

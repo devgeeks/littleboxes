@@ -1,5 +1,9 @@
 @import '../mixins/littlemixins.less';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   .positionAbsolute();
   padding: 0;
@@ -22,7 +26,6 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  box-sizing: border-box;
   z-index: 1;
 
   &.lb-app-mobile {
